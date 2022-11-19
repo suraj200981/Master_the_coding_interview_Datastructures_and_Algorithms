@@ -1,22 +1,20 @@
 import Contains_Common_Item.CommonItemLinearSolution;
 import Contains_Common_Item.CommonItemQuadraticsolution;
+import Has_Pair_With_Sum.hasPairWithSumLinear;
+import Has_Pair_With_Sum.hasPairWithSumQuadratic;
 
 import java.util.Arrays;
 import java.util.HashMap;
 
 public class main {
     public static void main(String[] args) {
+        int[] array1 = new int[]{1,2,3,9};
+        int[] array2 = new int[]{1,2,4,4};
 
-         char [] array1 = new char []{'a','b','c','x'};
-         char [] array2 = new char []{'z','y','x'};
-
-         //O(N^2) quadratic solution
-        CommonItemQuadraticsolution quadraticsolution = new CommonItemQuadraticsolution();
-//        System.out.println("Output:" + quadraticsolution.containsCommonItem(array1,array2));
-
-        //O(N) Linear solution
-        CommonItemLinearSolution linearSolution = new CommonItemLinearSolution();
-        System.out.println("Output:" + CommonItemLinearSolution.containsCommonItem(array1,array2));
-
+//      hasPairWithSumQuadratic sumQuadratic = new hasPairWithSumQuadratic();
+//      System.out.println("output: "+ sumQuadratic.pairFound(array2, 8));
+        hasPairWithSumLinear sumLinear = new hasPairWithSumLinear();
+        System.out.println("output: "+ sumLinear.pairFound(array1, 8));
     }
+
 }
