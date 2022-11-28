@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class main {
     public static void main(String[] args) {
 
-        int [] array1 = new int[]{0,3,4,13};
+        int [] array1 = new int[]{0,3,4,31};
         int [] array2 = new int[]{4,6,30};
 
 
