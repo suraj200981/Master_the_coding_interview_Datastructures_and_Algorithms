@@ -1,3 +1,4 @@
+import Maximum_Subarray.MaximumSubarrayQuadraticsSolution;
 import Merge_Sorted_Arrays.mergeSortedArray;
 import Reverse_String.reverseStringLinearSolution;
 import Two_Sum.twoSumLinearSolution;
@@ -8,9 +9,9 @@ import java.util.Arrays;
 public class main {
     public static void main(String[] args) {
 
-        int [] array1 = new int[]{2,5,5,11};
-        twoSumLinearSolution twoSum = new twoSumLinearSolution();
-        System.out.println("Output: "+ Arrays.toString(twoSum.twoSum(array1, 10)));
+        int [] array1 = new int[]{-2,1,-3,4,-1,2,1,-5,4};
+        MaximumSubarrayQuadraticsSolution maxSubArrayQuad = new MaximumSubarrayQuadraticsSolution();
+        System.out.println("Output: "+ maxSubArrayQuad.maxSubArray(array1));
 
     }
 
