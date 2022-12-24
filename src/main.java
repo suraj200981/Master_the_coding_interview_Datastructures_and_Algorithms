@@ -1,3 +1,4 @@
+import Contains_Duplicates.ContainsDuplicatesLinearSolution;
 import Contains_Duplicates.ContainsDuplicatesQuadraticSolution;
 import Maximum_Subarray.MaximumSubarrayLinearSolution;
 import Maximum_Subarray.MaximumSubarrayQuadraticsSolution;
@@ -11,10 +12,10 @@ import java.util.Arrays;
 public class main {
     public static void main(String[] args) {
 
-        int [] array1 = new int[]{1,2,3,1};
+        int [] array1 = new int[]{1,2,3,4};
 
-        ContainsDuplicatesQuadraticSolution containsDuplicatesQuadraticSolution = new ContainsDuplicatesQuadraticSolution();
-        System.out.println(containsDuplicatesQuadraticSolution.containsDuplicate(array1));
+        ContainsDuplicatesLinearSolution containsDuplicatesLinearSolution = new ContainsDuplicatesLinearSolution();
+        System.out.println(containsDuplicatesLinearSolution.containsDuplicate(array1));
 
 
     }
