@@ -10,7 +10,6 @@ public class MoveZerosQuadraticSolution {
     public void moveZeroes(int[] nums) {
 
         int count = 0;
-
         //count all the zeros
         //i bascially want to exclude the zeros but keep a count of the total non zeros
         for (int x= 0; x<nums.length; x++){
@@ -23,9 +22,6 @@ public class MoveZerosQuadraticSolution {
         for (int x=count; x< nums.length;x++){
             nums[x]= 0;
         }
-
         System.out.println("Output: " + Arrays.toString(nums));
-
     }
-
 }

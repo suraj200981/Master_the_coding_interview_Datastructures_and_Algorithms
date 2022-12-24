@@ -1,3 +1,4 @@
+import Contains_Duplicates.ContainsDuplicatesQuadraticSolution;
 import Maximum_Subarray.MaximumSubarrayLinearSolution;
 import Maximum_Subarray.MaximumSubarrayQuadraticsSolution;
 import Merge_Sorted_Arrays.mergeSortedArray;
@@ -10,10 +11,10 @@ import java.util.Arrays;
 public class main {
     public static void main(String[] args) {
 
-        int [] array1 = new int[]{0,1,0,3,12};
+        int [] array1 = new int[]{1,2,3,1};
 
-        MoveZerosQuadraticSolution moveZerosQuadraticSolution = new MoveZerosQuadraticSolution();
-        moveZerosQuadraticSolution.moveZeroes(array1);
+        ContainsDuplicatesQuadraticSolution containsDuplicatesQuadraticSolution = new ContainsDuplicatesQuadraticSolution();
+        System.out.println(containsDuplicatesQuadraticSolution.containsDuplicate(array1));
 
 
     }
