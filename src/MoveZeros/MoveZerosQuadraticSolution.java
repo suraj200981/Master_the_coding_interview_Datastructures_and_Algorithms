@@ -18,6 +18,7 @@ public class MoveZerosQuadraticSolution {
                count++;
            }
         }
+
         //moving zeros from starting index of count
         for (int x=count; x< nums.length;x++){
             nums[x]= 0;

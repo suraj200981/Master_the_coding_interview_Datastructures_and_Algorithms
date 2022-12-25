@@ -5,6 +5,7 @@ import Maximum_Subarray.MaximumSubarrayQuadraticsSolution;
 import Merge_Sorted_Arrays.mergeSortedArray;
 import MoveZeros.MoveZerosQuadraticSolution;
 import Reverse_String.reverseStringLinearSolution;
+import Rotate_Array.RotateArraySolution;
 import Two_Sum.twoSumLinearSolution;
 import Two_Sum.twoSumQuadraticSolution;
 import java.util.Arrays;
@@ -12,10 +13,10 @@ import java.util.Arrays;
 public class main {
     public static void main(String[] args) {
 
-        int [] array1 = new int[]{1,2,3,4};
+        int [] array1 = new int[]{1,2,3};
 
-        ContainsDuplicatesLinearSolution containsDuplicatesLinearSolution = new ContainsDuplicatesLinearSolution();
-        System.out.println(containsDuplicatesLinearSolution.containsDuplicate(array1));
+        RotateArraySolution rotateArraySolution = new RotateArraySolution();
+        rotateArraySolution.rotate(array1,2);
 
 
     }
