@@ -16,7 +16,7 @@ public class RotateArraySolution {
 //            [1,2,3] original
 //    k =
 //            2
-    // [2,3,1] new with k =  2
+    // [3,1,2] new with k =  1
 
     public void rotate(int[] nums, int k) {
 
@@ -62,6 +62,11 @@ public class RotateArraySolution {
             }else{
                 count=leftOver-1;
                 endpoint= leftOver-1;
+            }
+
+            if(nums.length==3){
+                count=leftOver+1;
+                endpoint = leftOver+1;
             }
 
             //reverting array length 'n'-k numbers

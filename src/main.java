@@ -31,7 +31,7 @@ public class main {
 //        System.out.println();
 //        rotateArraySolution.rotate(array2,2);
         System.out.println();
-        rotateArraySolution.rotate(array3,2);
+        rotateArraySolution.rotate(array3,1);
 //        System.out.println();
 //        rotateArraySolution.rotate(array4,3);
 //        System.out.println();
