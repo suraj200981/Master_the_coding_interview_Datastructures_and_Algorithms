@@ -16,64 +16,60 @@ public class RotateArraySolution {
 //            [1,2,3] original
 //    k =
 //            2
-    // [3,1,2] new with k =  2
+    // [2,3,1] new with k =  2
 
     public void rotate(int[] nums, int k) {
 
+        int count=0;
+        int [] reversedArray = new int[nums.length];
+        int leftOver = Math.abs(nums.length - k);
         if (nums.length == 1 || k==0) {
             System.out.println(Arrays.toString(nums));
 
-        } else {
-
-            int count = 0;
-            int y = 0;
-            if (nums.length % 2 == 0) {
-                y = k;
-            } else {
-                y = k + 1;
-            }
-            if(y==nums.length){
-                y=1;
-            }
-            int leftOver = Math.abs(nums.length - k);
-
-            if(leftOver==0){
+        }
+        else if(nums.length==2){
+            if(k%2==0){
                 System.out.println(Arrays.toString(nums));
-
-            }else {
-
-                int[] copyArrUpToSplit = new int[leftOver];
-
-                System.out.println();
-                System.out.println(String.valueOf(leftOver));
-
-                for (int x = 0; x < leftOver; x++) {
-                    copyArrUpToSplit[x] = nums[x];
-                }
-
-                System.out.println();
-                System.out.println("First half " + Arrays.toString(copyArrUpToSplit));
-                System.out.println();
-                if(nums.length==2){
-                    y=1;
-                    k= nums.length-1;
-                }
-                for (int x = 0; x < k; x++) {
-                    nums[x] = nums[y++];
-                }
+            }else{
+                int temp1=0;
+                int temp2=0;
+                temp1 = nums[0];
+                temp2 = nums[1];
+                nums[0] = temp2;
+                nums[1] = temp1;
                 System.out.println(Arrays.toString(nums));
-
-                if (nums.length % 2 == 0) {
-                    leftOver++;
-                }
-
-                for (int x = leftOver - 1; x < nums.length; x++) {
-                    nums[x] = copyArrUpToSplit[count++];
-                }
-
-                System.out.println(Arrays.toString(nums));
-
             }
+        }
+
+        else {
+            //reverse all numbers
+            for(int x=nums.length-1; x>=0; x--){
+                reversedArray[count++]= nums[x];
+            }
+            System.out.println(Arrays.toString(reversedArray) + " Reversed array all numbers");
+
+            count=0;
+            //reverse first k numbers
+            for(int x=k-1; x>=0;x--){
+                nums[count++]=reversedArray[x];
+            }
+            System.out.println(Arrays.toString(nums) + " reverse first k");
+
+            int endpoint=0;
+            if(nums.length%2==0){
+                count=leftOver;
+                endpoint= leftOver;
+            }else{
+                count=leftOver-1;
+                endpoint= leftOver-1;
+            }
+
+            //reverting array length 'n'-k numbers
+            for(int x=reversedArray.length-1; x>=endpoint; x--){
+                nums[count++] = reversedArray[x];
+            }
+
+            System.out.println(Arrays.toString(nums) + " reverting n-k numbers");
         }
     }
 }
