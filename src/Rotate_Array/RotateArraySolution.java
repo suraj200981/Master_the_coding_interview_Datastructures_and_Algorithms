@@ -43,38 +43,55 @@ public class RotateArraySolution {
 
         else {
             //reverse all numbers
-            for(int x=nums.length-1; x>=0; x--){
-                reversedArray[count++]= nums[x];
+            for (int x = nums.length - 1; x >= 0; x--) {
+                reversedArray[count++] = nums[x];
             }
             System.out.println(Arrays.toString(reversedArray) + " Reversed array all numbers");
 
-            count=0;
+            count = 0;
+            int starting=0;
+            if(nums.length==3 && k> nums.length){
+                starting = k-2;
+            }else{
+                starting = k-1;
+            }
             //reverse first k numbers
-            for(int x=k-1; x>=0;x--){
-                nums[count++]=reversedArray[x];
+            for (int x = starting; x >= 0; x--) {
+                nums[count++] = reversedArray[x];
             }
             System.out.println(Arrays.toString(nums) + " reverse first k");
 
-            int endpoint=0;
-            if(nums.length%2==0){
-                count=leftOver;
-                endpoint= leftOver;
-            }else{
-                count=leftOver-1;
-                endpoint= leftOver-1;
+            int endpoint = 0;
+            if (nums.length % 2 == 0) {
+                count = leftOver;
+                endpoint = leftOver;
+            } else {
+                count = leftOver - 1;
+                endpoint = leftOver - 1;
             }
+            if (nums.length == 3 && k % 3 == 0) {
+                count=0;
+                for (int x = reversedArray.length-1; x>=0; x--) {
+                    nums[count++] = reversedArray[x];
+                }
+                System.out.println(Arrays.toString(nums) + " reverting n-k numbers");
+            } else {
 
-            if(nums.length==3){
-                count=leftOver+1;
-                endpoint = leftOver+1;
+                if (nums.length == 3 && k % 2 != 0) {
+                    count = Math.abs(leftOver - 1);
+                    endpoint = Math.abs(leftOver - 1);
+                } else if (nums.length == 3 && k % 2 == 0) {
+                    count = leftOver + 1;
+                    endpoint = leftOver + 1;
+                }
+
+                //reverting array length 'n'-k numbers
+                for (int x = reversedArray.length - 1; x >= endpoint; x--) {
+                    nums[count++] = reversedArray[x];
+                }
+
+                System.out.println(Arrays.toString(nums) + " reverting n-k numbers");
             }
-
-            //reverting array length 'n'-k numbers
-            for(int x=reversedArray.length-1; x>=endpoint; x--){
-                nums[count++] = reversedArray[x];
-            }
-
-            System.out.println(Arrays.toString(nums) + " reverting n-k numbers");
         }
     }
 }

@@ -20,8 +20,10 @@ public class main {
         int [] array1 = new int[]{1,2,3,4,5,6,7};
         int [] array2 = new int[]{-1,-100,3,99};
         int [] array3 = new int[]{1,2,3};
-        int [] array4 = new int[]{1,2};
-        int [] array5 = new int[]{1};
+        int [] array4 = new int[]{1,2,3};
+        int [] array5 = new int[]{1,2};
+        int [] array6 = new int[]{1};
+        int [] array7 = new int[]{1,2,3};
 
 
 
@@ -30,12 +32,16 @@ public class main {
 //        rotateArraySolution.rotate(array1,3);
 //        System.out.println();
 //        rotateArraySolution.rotate(array2,2);
-        System.out.println();
-        rotateArraySolution.rotate(array3,1);
 //        System.out.println();
-//        rotateArraySolution.rotate(array4,3);
+//        rotateArraySolution.rotate(array3,1);
 //        System.out.println();
-//        rotateArraySolution.rotate(array5,1);
+//        rotateArraySolution.rotate(array4,2);
+//        System.out.println();
+//        rotateArraySolution.rotate(array5,3);
+//        System.out.println();
+//        rotateArraySolution.rotate(array6,1);
+//        System.out.println();
+        rotateArraySolution.rotate(array7,4);
 
 
 
